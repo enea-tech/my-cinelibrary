@@ -1,0 +1,14 @@
+{
+  "name": "my-cinelibrary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "My CineLibrary — biblioteca cinematografica personale (PWA per iPhone, offline, dati locali)",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

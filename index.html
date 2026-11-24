@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My CineLibrary</title>
+<meta name="description" content="La mia biblioteca cinematografica personale: film visti per regista, film da vedere, commenti e statistiche. Funziona offline.">
+<meta name="theme-color" content="#0a0808">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CineLibrary">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="preload" href="fonts/bodoni-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<style>
+  html, body { background: #0a0808; }
+  #splash { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: #0a0808; transition: opacity .4s; }
+  #splash.out { opacity: 0; pointer-events: none; }
+  #splash b { font: 700 42px/1 "Bodoni Moda", Didot, Georgia, serif; color: #f3ede6; letter-spacing: -.02em; }
+  #splash i { font-style: normal; color: #d9242c; }
+</style>
+</head>
+<body>
+<div id="splash" aria-hidden="true"><b><i>Cine</i>Library</b></div>
+<div id="app">
+  <main id="view"></main>
+  <nav id="tabbar" aria-label="Sezioni dell'app"></nav>
+</div>
+<div id="modal-layer"></div>
+<div id="overlay" aria-live="polite"></div>
+<noscript><p style="padding:40px;color:#f3ede6;font:16px system-ui">My CineLibrary ha bisogno di JavaScript per funzionare.</p></noscript>
+<script src="app.js" defer></script>
+</body>
+</html>
